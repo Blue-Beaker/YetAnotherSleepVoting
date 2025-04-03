@@ -1,8 +1,7 @@
-package io.bluebeaker.examplemod;
+package io.bluebeaker.yasleepvoting;
 
 import org.apache.logging.log4j.Logger;
 
-import io.bluebeaker.examplemod.Tags;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.ConfigManager;
@@ -14,8 +13,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
-public class ExampleMod
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION,acceptableRemoteVersions = "*")
+public class YASleepVoting
 {
     public static final String MODID = Tags.MOD_ID;
     public static final String NAME = Tags.MOD_NAME;
@@ -25,7 +24,7 @@ public class ExampleMod
 
     private static Logger logger;
     
-    public ExampleMod() {
+    public YASleepVoting() {
         MinecraftForge.EVENT_BUS.register(this);
     }
     
