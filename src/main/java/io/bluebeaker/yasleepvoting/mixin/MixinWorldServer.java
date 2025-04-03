@@ -40,8 +40,9 @@ public class MixinWorldServer {
             }
 
             this.allPlayersSleeping = (sleepingPlayers > 0) && ((sleepingPlayers / (float) (server.playerEntities.size() - spectators) * 100) >= YASleepVotingConfig.sleepVotePercentage);
-
-            YASleepVoting.getLogger().info("Sleeping percentage: {}, {}",((sleepingPlayers / (float) (server.playerEntities.size() - spectators) * 100)),this.allPlayersSleeping);
+            if(YASleepVotingConfig.showDebugMessages){
+                YASleepVoting.getLogger().info("Sleeping percentage: {}, {}",((sleepingPlayers / (float) (server.playerEntities.size() - spectators) * 100)),this.allPlayersSleeping);
+            }
         }
         ci.cancel();
     }

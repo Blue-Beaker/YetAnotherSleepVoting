@@ -1,18 +1,17 @@
 package io.bluebeaker.yasleepvoting;
 
+import net.minecraftforge.common.ForgeVersion;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import zone.rong.mixinbooter.IEarlyMixinLoader;
+
+import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Nullable;
-
-import net.minecraftforge.common.ForgeVersion;
-import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
-import zone.rong.mixinbooter.ILateMixinLoader;
-
 @IFMLLoadingPlugin.Name("yasleepvoting")
 @IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
-public class YASleepVotingMixins implements IFMLLoadingPlugin, ILateMixinLoader {
+public class YASleepVotingMixins implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
     @Override
     public List<String> getMixinConfigs() {
