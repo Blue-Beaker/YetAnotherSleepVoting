@@ -1,1 +1,4 @@
-config.yasleepvoting.sleepVotePercentage.name=Sleep Voting Percentage
+config.yasleepvoting.sleepVotePercentage.name=Sleeping Percentage
+commands.yasleepvoting.usage=/yasleepvoting <Percentage>
+commands.yasleepvoting.success=Set sleeping percentage to %s%%
+commands.yasleepvoting.get=Current sleeping percentage is %s%%

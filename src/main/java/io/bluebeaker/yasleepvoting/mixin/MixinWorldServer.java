@@ -18,7 +18,7 @@ public class MixinWorldServer {
 
     @Inject(method = "updateAllPlayersSleepingFlag", at = @At("HEAD"), cancellable = true)
     public void updateSleepingFlag(CallbackInfo ci){
-        if(YASleepVotingConfig.sleepVotePercentage>=100) return;
+        if(YASleepVotingConfig.sleepVotePercentage==100.0f) return;
 
         this.allPlayersSleeping=false;
         WorldServer server = (WorldServer) (Object) this;

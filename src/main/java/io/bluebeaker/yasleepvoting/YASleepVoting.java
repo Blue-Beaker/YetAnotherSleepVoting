@@ -35,6 +35,7 @@ public class YASleepVoting
     @EventHandler
     public void onServerStart(FMLServerStartingEvent event){
         this.server=event.getServer();
+        event.registerServerCommand(new YASVCommand());
     }
 
     @SubscribeEvent

@@ -1,0 +1,4 @@
+config.yasleepvoting.sleepVotePercentage.name=入睡占比
+commands.yasleepvoting.usage=/yasleepvoting <百分比>
+commands.yasleepvoting.success=已将入睡占比设为 %s%%
+commands.yasleepvoting.get=当前入睡占比为 %s%%
